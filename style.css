@@ -17,6 +17,7 @@
     margin-right: 20px;
     width:100%;
     right:0;
+    flex-wrap:wrap;
      
 
 }
@@ -39,4 +40,47 @@
 nav a:hover{
     text-decoration: underline;
     color:red;
+}
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+@media screen and (max-width: 600px) {
+    .header {
+        
+        flex-direction: column;
+        align-items: flex-start;
+    }
+     nav  {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: black;
+
+
+    }
+    nav a{
+        margin:10px 20px;
+        font-size: 20px;
+    }
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+
+
+
+    }
+    nav.active{
+        display: flex;
+    }
+    .btn{
+          
+    }
+    
 }
