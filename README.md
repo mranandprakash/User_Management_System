@@ -22,6 +22,10 @@ This project is built for learning and demonstration purposes with a focus on cl
   - Responsive header & navigation.
   - Accessible design and keyboard-friendly navigation.
  
+  ---
+
+## 📂 Project Structure
+ 
 User_Management_System/
 │
 ├── .github/ # GitHub configuration files
@@ -34,6 +38,5 @@ User_Management_System/
 ├── style.css # Styles
 └── app.js # Core logic
 
----
 
-## 📂 Project Structure
+
