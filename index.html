@@ -15,10 +15,24 @@
             <a href="#">location</a>
             <a href="#" id="mytask" class="hidden">My task</a>
         </nav>
-        <button class="btn">Login</button>
+        <button class="btn" id="loginbtn" onclick="{handlelogin}">Login</button>
         <button class="menu-toggle" id="menuToggle">&#9776;</button> 
 
     </header>
+    <div id="overlay"></div>
+
+
+     <div class="loginpopup hidden" id="loginPopup">
+        <h1>Login</h1>
+       <input type="text" placeholder="userId" id="loginuserid">
+       <div class="error" id="erroruserid"></div> 
+       <input type="password" placeholder="password" id="loginpassword">
+       <div class="error" id="errorpassword"></div>
+         <button class="btn" id="submitbtn" onclick="{handlelogin}">Login</button>
+       <button class="btn" id="createuser" onclick="{handleCreateUser}">CreateUser</button>
+        
+        
+     </div>
     <script src="script.js"></script>
 </body>
 </html>
