@@ -80,7 +80,7 @@ nav a:hover{
         display: flex;
     }
     .btn{
-          
+        margin:10px 20px;  
     }
     
 }
