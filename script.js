@@ -14,10 +14,17 @@ const loginpopup=document.getElementById("loginPopup");
 const btn=document.querySelector("#loginbtn");
 const submitbtn=document.querySelector("#submitbtn");
 const dashboard=document.getElementById("dashboard");
+const createuserpopup=document.getElementById("createUserPopup");
 function openpopup(login){
     login.style.display="block";
 }
 function closepopup(){
+    loginpopup.style.display="none";
+    createuserpopup.style.display="none";
+
+}
+function openCreateUserPopup(){
+    createuserpopup.style.display="block";
     loginpopup.style.display="none";
 }
 btn.onclick=()=>openpopup(loginpopup);
@@ -114,7 +121,17 @@ if (
 
 if (!valid) return;
 
+let newusers={
+    userid: fname.toLowerCase(),
+    firstName: fname,
+    lastName: lname,
+    phone: phone,
+    password: password,
+    userType: usertype
+}
 
-
-
+users.push(newusers);
+alert("User created successfully. Your UserID is "+newusers.userid);
+closepopup();
+openpopup(loginpopup);
 }
