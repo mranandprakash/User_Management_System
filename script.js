@@ -42,19 +42,19 @@ function handlelogin(){
         document.getElementById("mytask").classList.remove("hidden");
         btn.innerText="Logout";
         btn.onclick=handlelogout;
-        if(user.userType==="admin"){
-         dashboard.innerHTML = `<h2>⚡ Welcome Admin ${user.firstName}</h2><p>You have access to manage users and system settings.</p>
-         <button>Manage Users</button>
-         <button>System Settings</button>
-         <button>View Reports</button>
+     if(user.userType==="admin"){
+     dashboard.innerHTML = `<h2>⚡ Welcome Admin ${user.firstName}</h2><p>You have access to manage users and system settings.</p>
+     <button>Manage Users</button>
+     <button>System Settings</button>
+     <button>View Reports</button>
          `;
-    }
-    else if(user.userType==="student"){
-         dashboard.innerHTML = `<h2>🎓 Welcome Student ${user.firstName}</h2><p>You can view your courses and assignments here.</p>
+ }
+ else if(user.userType==="student"){
+     dashboard.innerHTML = `<h2>🎓 Welcome Student ${user.firstName}</h2><p>You can view your courses and assignments here.</p>
          
-         <button>View Courses</button>
-         <button>Submit Assignments</button>
-         <button>Check Grades</button>
+     <button>View Courses</button>
+      <button>Submit Assignments</button>
+     <button>Check Grades</button>
          `;
     }
     
