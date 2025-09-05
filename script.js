@@ -15,6 +15,7 @@ const btn=document.querySelector("#loginbtn");
 const submitbtn=document.querySelector("#submitbtn");
 const dashboard=document.getElementById("dashboard");
 const createuserpopup=document.getElementById("createUserPopup");
+const Welcome=document.getElementById("welcome");
 function openpopup(login){
     login.style.display="block";
 }
@@ -45,7 +46,8 @@ function handlelogin(){
     if(user){
         currentuser=user;
         closepopup();
-        
+        Welcome.classList.remove("hidden");
+    
         document.getElementById("mytask").classList.remove("hidden");
         btn.innerText="Logout";
         btn.onclick=handlelogout;
@@ -78,13 +80,14 @@ function handlelogout() {
     btn.innerText = "Login";
     btn.onclick = () => openpopup(loginpopup); 
     document.getElementById("mytask").classList.add("hidden");
+    Welcome.classList.add("hidden");
 }
 function handleCreateUser(){
    const fname=document.getElementById("firstName").value.trim();
    const lname=document.getElementById("lastName").value.trim();
    const phone=document.getElementById("phone").value.trim();
    const password=document.getElementById("password").value.trim();
-   const cpass=document.getElementById("confirmpassword").value.trim();
+   const cpass=document.getElementById("confirmPassword").value.trim();
    const usertype=document.getElementById("userType").value;
    
   let valid = true;
@@ -114,7 +117,7 @@ if (
   !/^\d{10}$/.test(phone) ||
   !/^(?=.*[A-Za-z])(?=.*\d).{6,}$/.test(password) ||
   password !== cpass ||
-  !type
+  !usertype
 ) {
   valid = false;
 }
