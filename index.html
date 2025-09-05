@@ -29,13 +29,13 @@
        <input type="password" placeholder="password" id="loginpassword">
        <div class="error" id="errorpassword"></div>
          <button class="btn" id="submitbtn" onclick="handlelogin()">Login</button>
-       <button class="btn" id="createuser" onclick="handleCreateUser()">CreateUser</button>
+       <button class="btn" id="createuser" onclick="openCreateUserPopup()">Create User</button>
         
         
      </div>
 
      <div class="dashboard" id="dashboard"></div>
-     <div class="popup" id="createUserPopup">
+     <div class="popup hidden" id="createUserPopup">
         <h1>Create User</h1>
         <input type="text" placeholder="First Name" id="firstName"class="input-field">
         <div class="error" id="errorFirstName"></div>
