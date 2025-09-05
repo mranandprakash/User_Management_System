@@ -59,6 +59,52 @@
     
 
      </div>
+ <div class="container hidden" id="taskSection">
+  <h3>Task Manager</h3>
+
+  <input type="text" id="taskTitle" placeholder="Task Title">
+  <div class="error" id="taskTitleError"></div>
+
+  <input type="text" id="taskDescription" placeholder="Task Description">
+
+  <select id="taskCategory">
+    <option value="Work">Work</option>
+    <option value="Study">Study</option>
+    <option value="Personal">Personal</option>
+    <option value="Other">Other</option>
+  </select>
+
+  <input type="date" id="taskDueDate">
+  <div class="error" id="taskDateError"></div>
+
+  <select id="taskPriority">
+    <option value="">Select Priority</option>
+    <option value="Low">Low</option>
+    <option value="Medium">Medium</option>
+    <option value="High">High</option>
+  </select>
+  <div class="error" id="taskPriorityError"></div>
+
+  <button onclick="addTask()">Add Task</button>
+  <button onclick="resetTaskForm()">Reset</button>
+
+  <h3>Task List</h3>
+  <table id="taskTable">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Category</th>
+        <th>Due Date</th>
+        <th>Priority</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
     <script src="script.js"></script>
 </body>
 </html>
