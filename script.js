@@ -16,6 +16,7 @@ const submitbtn=document.querySelector("#submitbtn");
 const dashboard=document.getElementById("dashboard");
 const createuserpopup=document.getElementById("createUserPopup");
 const Welcome=document.getElementById("welcome");
+const tasksection=document.getElementById("taskSection");
 function openpopup(login){
     login.style.display="block";
 }
@@ -47,7 +48,7 @@ function handlelogin(){
         currentuser=user;
         closepopup();
         Welcome.classList.remove("hidden");
-    
+         tasksection.classList.remove("hidden");
         document.getElementById("mytask").classList.remove("hidden");
         btn.innerText="Logout";
         btn.onclick=handlelogout;
