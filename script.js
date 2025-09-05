@@ -72,4 +72,49 @@ function handlelogout() {
     btn.onclick = () => openpopup(loginpopup); 
     document.getElementById("mytask").classList.add("hidden");
 }
+function handleCreateUser(){
+   const fname=document.getElementById("firstName").value.trim();
+   const lname=document.getElementById("lastName").value.trim();
+   const phone=document.getElementById("phone").value.trim();
+   const password=document.getElementById("password").value.trim();
+   const cpass=document.getElementById("confirmpassword").value.trim();
+   const usertype=document.getElementById("userType").value;
+   
+  let valid = true;
 
+document.getElementById("errorFirstName").innerText =
+  /^[A-Za-z]+$/.test(fname) ? "" : "First name must contain only letters";
+
+document.getElementById("errorLastName").innerText =
+  /^[A-Za-z]+$/.test(lname) ? "" : "Last name must contain only letters";
+
+document.getElementById("errorphone").innerText =
+  /^\d{10}$/.test(phone) ? "" : "Phone must be exactly 10 digits";
+
+document.getElementById("errorPassword").innerText =
+  /^(?=.*[A-Za-z])(?=.*\d).{6,}$/.test(password)
+    ? ""  : "Password must be at least 6 characters, include a letter and a number";
+
+document.getElementById("errorConfirmPassword").innerText =
+  password === cpass ? "" : "Passwords do not match";
+
+document.getElementById("errorUserType").innerText =
+ usertype ? "" : "Please select a user type";
+
+if (
+  !/^[A-Za-z]+$/.test(fname) ||
+  !/^[A-Za-z]+$/.test(lname) ||
+  !/^\d{10}$/.test(phone) ||
+  !/^(?=.*[A-Za-z])(?=.*\d).{6,}$/.test(password) ||
+  password !== cpass ||
+  !type
+) {
+  valid = false;
+}
+
+if (!valid) return;
+
+
+
+
+}
