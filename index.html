@@ -33,6 +33,29 @@
         
         
      </div>
+
+     <div class="dashboard" id="dashboard"></div>
+     <div class="popup" id="createUserPopup">
+        <h1>Create User</h1>
+        <input type="text" placeholder="First Name" id="firstName">
+        <div class="error" id="errorFirstName"></div>
+        <input type="text" placeholder="Last Name" id="lastName">
+        <div class="error" id="errorLastName"></div>
+        <input tye="text" placeholder="phone number" id="phone">
+        <div class="error" id="errorPhone"></div>
+        <input type="password" placeholder="Password" id="password">
+        <div class="error" id="errorPassword"></div>
+        <input type="text"placeholder="confirm Password" id="confirmPassword">
+        <div class="error" id="errorConfirmPassword"></div>
+        <select id="userType">
+            <option value="">Select User Type</option>
+            <option value="admin">Admin</option>
+            <option value="student">Student</option>
+        </select>
+        <div class="error" id="errorUserType"></div>
+        <button class="btn" onclick="handleCreateUser()">Create User</button>
+
+     </div>
     <script src="script.js"></script>
 </body>
 </html>

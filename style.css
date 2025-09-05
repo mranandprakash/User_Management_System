@@ -117,3 +117,10 @@ nav a:hover{
     font-size: 12px;
     
 }
+#dashboard {
+  padding: 20px;
+  background-color: #f8f8f8;
+  margin: 20px;
+  border: 1px solid #ccc;
+}
+
