@@ -37,23 +37,24 @@
      <div class="dashboard" id="dashboard"></div>
      <div class="popup" id="createUserPopup">
         <h1>Create User</h1>
-        <input type="text" placeholder="First Name" id="firstName">
+        <input type="text" placeholder="First Name" id="firstName"class="input-field">
         <div class="error" id="errorFirstName"></div>
-        <input type="text" placeholder="Last Name" id="lastName">
+        <input type="text" placeholder="Last Name" id="lastName"class="input-field">
         <div class="error" id="errorLastName"></div>
-        <input tye="text" placeholder="phone number" id="phone">
-        <div class="error" id="errorPhone"></div>
-        <input type="password" placeholder="Password" id="password">
+        <input type="text" placeholder="phone Number" id="phone" class="input-field">
+        <div class="error" id="errorphone"></div>
+        <input type="password" placeholder="Password" id="password" class="input-field">
         <div class="error" id="errorPassword"></div>
-        <input type="text"placeholder="confirm Password" id="confirmPassword">
+        <input type="text" placeholder="confirm Password" id="confirmPassword" class="input-field">
         <div class="error" id="errorConfirmPassword"></div>
-        <select id="userType">
+        <select id="userType" class="input-field">
             <option value="">Select User Type</option>
             <option value="admin">Admin</option>
             <option value="student">Student</option>
         </select>
         <div class="error" id="errorUserType"></div>
-        <button class="btn" onclick="handleCreateUser()">Create User</button>
+        <button class="btn" onclick="handleCreateUserSubmit()">Create User</button>
+    
 
      </div>
     <script src="script.js"></script>
