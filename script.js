@@ -1,6 +1,7 @@
 let users=[
       { userid: "john123", firstName: "John", lastName: "Doe", phone: "9876543210", password: "pass1234", userType: "student" },
-        { userid: "jane456", firstName: "Jane", lastName: "Smith", phone: "8765432109", password: "pass5678", userType: "teacher" },
+        { userid: "jane456", firstName: "Jane", lastName: "Smith", phone: "8765432109", password: "pass5678", userType: "admin" },
+        { userid: "alice789", firstName: "Alice", lastName: "Johnson", phone: "7654321098", password: "pass9101", userType: "student" }
 ];
 let currentuser=null;
 const menuToggle = document.getElementById('menuToggle');
